@@ -8,3 +8,9 @@
 
 
 3、应用测试的时候出现闪退的现象说明应用中存在错误。查看日志解决问题
+
+
+4、Error:Execution failed for task ':app:dexDebug'.
+> com.android.ide.common.process.ProcessException: org.gradle.process.internal.ExecException: 
+Process 'command 'G:\Program Files\Java\jdk1.8.0_91\bin\java.exe'' finished with non-zero exit value 2
+错误的原因是由于libs中存在多余的v4或者v7包，把v4或者v7包删除就可以了
