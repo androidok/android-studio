@@ -1,0 +1,8 @@
+1、Error:Failed to find target with hash string 'android-23'
+这个错误的原因是我们项目的设置的最高版本和我们软件的最高版本不相符
+    修改这个内容和软件的编译相对应就行了
+    compileSdkVersion 26
+    buildToolsVersion '25.0.2'
+    
+    如果项目中有依赖模块的时候，我们还要修改依赖模块，这样的话项目中就不会报错了，如果依赖包的编译版本没有修改的话也会引起这个错误的，
+    并且依赖包的最低版本要低于我们开发的app的最低版本。
