@@ -6,3 +6,15 @@
     
     如果项目中有依赖模块的时候，我们还要修改依赖模块，这样的话项目中就不会报错了，如果依赖包的编译版本没有修改的话也会引起这个错误的，
     并且依赖包的最低版本要低于我们开发的app的最低版本。
+    
+    
+ 2、Some file crunching failed, see logs for details
+    这个错误的原因是由于我们加载的图片引起的
+    这个错误的处理方法是在模块中的build.gradle中的android方法中添加下面的内容
+    
+     aaptOptions {
+ 6         cruncherEnabled = false
+ 7         useNewCruncher = false
+ 8 
+ 9     }
+  
